@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calculator">
+        <div class="screen">
+            <input type="text" id="result" disabled>
+        </div>
+        <!-- Tombol Riwayat Ikon, Diletakkan di bawah input -->
+        <button class="history-icon" onclick="toggleHistory()">&#128197;</button> <!-- Ikon Kalender -->
+
+        <div class="buttons">
+            <button class="btn" onclick="appendNumber(7)">7</button>
+            <button class="btn" onclick="appendNumber(8)">8</button>
+            <button class="btn" onclick="appendNumber(9)">9</button>
+            <button class="btn" onclick="appendOperator('/')">/</button>
+
+            <button class="btn" onclick="appendNumber(4)">4</button>
+            <button class="btn" onclick="appendNumber(5)">5</button>
+            <button class="btn" onclick="appendNumber(6)">6</button>
+            <button class="btn" onclick="appendOperator('*')">*</button>
+
+            <button class="btn" onclick="appendNumber(1)">1</button>
+            <button class="btn" onclick="appendNumber(2)">2</button>
+            <button class="btn" onclick="appendNumber(3)">3</button>
+            <button class="btn" onclick="appendOperator('-')">-</button>
+
+            <button class="btn" onclick="appendNumber(0)">0</button>
+            <button class="btn" onclick="clearScreen()">C</button>
+            <button class="btn" onclick="calculateResult()">=</button>
+            <button class="btn" onclick="appendOperator('+')">+</button>
+        </div>
+
+        <!-- Riwayat -->
+        <div class="history-container">
+            <ul id="history-list" class="history-list">
+                <!-- Riwayat hasil perhitungan akan ditambahkan di sini -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- Notifikasi -->
+    <div id="notification" class="notification" style="display: none;">
+        Max 15 digit yang dapat diisi kawan.
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
